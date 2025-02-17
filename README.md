@@ -26,7 +26,7 @@ This method allows you to run both the frontend and backend on your local machin
 
 1️⃣ Clone this repository to your PC:
    ```sh
-   git clone <repository_url>
+   git clone https://github.com/parv141206/fluvid
    ```
 
 2️⃣ In the root directory of the project (just outside `src`), create a directory named `uploads`:
