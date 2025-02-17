@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Fluvid
 
-## Getting Started
+## 📌 Description
+Fluvid helps you record **long** videos (hours-long!) without worrying about storage space. 🎥💾
 
-First, run the development server:
+## 🔍 How It Works
+📹 You can record video directly from the website! While recording, Fluvid breaks the video into smaller chunks of 'n' seconds.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⬆️ Each chunk is **immediately uploaded** to your PC (acting as a server). When you stop recording, Fluvid seamlessly stitches all chunks together into a full video. This way, you **save tons of phone storage** instead of filling it up with GBs of raw footage! 🏆
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ Prerequisites
+- 📌 Node.js installed on your system
+- 🌍 Ngrok for exposing the app to the internet
 
-## Learn More
+### ⚙️ Setup Instructions
 
-To learn more about Next.js, take a look at the following resources:
+#### 💻 Running the frontend and backend locally (Recommended)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This method allows you to run both the frontend and backend on your local machine and expose it via port forwarding to a public URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 📝 Steps to set up:
 
-## Deploy on Vercel
+1️⃣ Clone this repository to your PC:
+   ```sh
+   git clone <repository_url>
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2️⃣ In the root directory of the project (just outside `src`), create a directory named `uploads`:
+   ```sh
+   mkdir uploads
+   ```
+   📂 Your recorded videos will be saved here!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3️⃣ Build the project for production:
+   ```sh
+   npm run build
+   ```
+
+4️⃣ Run the production server:
+   ```sh
+   npm run start
+   ```
+
+5️⃣ Install Ngrok and run the following command in a new terminal:
+   ```sh
+   ngrok http 3000
+   ```
+   🌐 This exposes the app to the internet and provides a **public URL**.
+
+6️⃣ Copy the public URL:
+   - 🔗 Use it to access the **frontend**.
+   - 🔗 Paste the **same URL** for the 'Backend URL'.
+   - 🎉 You should be **good to go!**
+
+---
+
+### ℹ️ Additional Information
+- 🐧 **Currently only tested on Linux**
+
+---
+
+## Regards... parv
