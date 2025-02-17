@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+const path = require("path");
 
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/uploads/:path*",
+        destination: path.join(__dirname, "uploads", ":path*"),
+      },
+    ];
+  },
 };
-
-export default nextConfig;
